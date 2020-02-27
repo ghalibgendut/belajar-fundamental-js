@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h1 style="text-align: center;">FORM</h1>
+
+
+    <form>
+        <p>
+            Nama : <input type="text" name="nama" id="name">
+        </p>
+        <p>
+            Umur : <input type="number" name="umur" id="age">
+        </p>
+        <p>
+            <!-- name pada radio buton harus sama agar terhubung -->
+            Gender :
+            <input type="radio" name="gender" value="Pria"> Pria
+            <input type="radio" name="gender" value="Wanita"> Wanita
+        </p>
+        <p>
+            Kemampuan :
+            <input type="checkbox" name="html" value="HTML"> HTML
+            <input type="checkbox" name="css" value="CSS"> CSS
+            <input type="checkbox" name="Javascript" value="Javascript"> Javascript
+        </p>
+
+    </form>
+    <!-- jika di klk, akan ru function send() -->
+    <input type="button" value="Kirim" onclick="send()">
+
+    <p id="result">
+        
+    </p>
+
+
+
+    <script src="./form.js"></script>
+
+
+</body>
+</html>

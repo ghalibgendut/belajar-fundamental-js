@@ -1,0 +1,9 @@
+KISI - KISI
+1. looping
+2. if else
+3. function
+4. object, array
+5. map, filter
+6. sort
+7. html (getbyid, getbynamesn checkbox, radio, dropdown)
+

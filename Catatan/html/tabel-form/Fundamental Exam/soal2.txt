@@ -1,0 +1,27 @@
+let repeat = true;
+let arrAngka = [];
+do {
+    let angka = parseInt(prompt('Masukan Angka :'));
+    arrAngka.push(angka);
+    var max = Math.max.apply(null, arrAngka);
+    var min = Math.min.apply(null, arrAngka);
+    console.log(arrAngka);
+    for (let i = 0; i < arrAngka.length; i++) {
+        if (arrAngka[i] == max) {
+            console.log(`Nilai Tertinggi : ${max}`);
+        }
+        else if(arrAngka[i] == min){
+            console.log(`Nilai Terendah : ${min}`);
+        }
+
+    }
+    // var max = Math.max(Math, arrAngka);
+    // var min = Math.min(Math, arrAngka);
+    // console.log(angka);
+    
+    if (angka != angka) {
+        repeat = false;  
+    }
+} while (repeat);
+console.log(`Nilai Tertinggi : ${max}`);
+console.log(`Nilai Terendah : ${min}`);

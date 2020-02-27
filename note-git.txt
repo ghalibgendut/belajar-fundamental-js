@@ -1,0 +1,14 @@
+git --version : untuk melihat versi git
+
+git config --global user.name (username) : untuk melihat set username di git
+
+git config --global user.email (email) : untuk melihat set email di git
+
+git init : inisialisasi terhadap folder project, agar di track oleh git
+
+git add (nama file yang ingin di staging) : untuk memindahkan file dari untracked /modified area ke staging area
+
+git rm --cached (nama file) : untuk memindahkan file dari staging area ke untracked /modified area
+
+git status untuk melihat status file saat ini
+

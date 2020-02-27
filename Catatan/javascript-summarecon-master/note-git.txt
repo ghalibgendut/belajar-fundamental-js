@@ -1,0 +1,47 @@
+git --version
+    Untuk melihat versi git
+
+git config --global user.name <yourUserName>
+    Untuk set username di git
+
+git config --global user.email <yourEmail>
+    Untuk set email di git
+
+git init
+    Inisialisasi terhadap folder projek, agar di track oleh git.
+
+git status
+    Untuk melihat status file saat ini
+
+git add <fileName>
+    Memindahkan file dari untracked / modified area ke staging area
+
+git add .
+    Memindahkan semua file dari untracked / modified area ke staging area
+
+git rm --cached <fileName>
+    Memindahkan file dari staging area ke untracked / modified area
+
+git commit -m "<yourMessage>"
+    Membuat commit (checkpoint) dengan melampirkan pesan.
+
+git log
+    Melihat list commit dengan informasi lengkap
+
+git log --oneline
+    Melihat list commit dengan informasi singkat
+
+git checkout <uniqId>
+    Untuk melihat ke commit tertentu
+
+git checkout master
+    Untuk kembali ke commit terakhir (terbaru)
+
+git revert <uniqId>
+    Memberikan tanda silang terhadap commit tertentu, maka kode yang kita commit saat itu akan dihilangkan di versi terakhir. Namun kita masih bisa melihat ke commit tsb (yg sudah di silang) dengan git checkout <uniqId> yg di revert.
+
+git reset <uniqId>
+    Untuk menghapus commit tertentu, namun kode yang berhubungan dengan commit yang dihapus masih ada.
+
+git reset <uniqId> --hard
+    Untuk menghapus commit tertentu dan juga kode yang berhubungan dengan commit tersebut. Proses ini tidak bisa di undo.

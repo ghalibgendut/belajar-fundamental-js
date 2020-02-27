@@ -1,0 +1,45 @@
+let send = () => {
+    var jenis = document.getElementById('jenisBangungan').value;
+    var ukuran = parseInt(document.getElementById('ukuran').value);
+
+    let bintang = '';
+    if (jenis == 1) {
+        for (let i = 0; i < ukuran; i++) {
+
+            for (let j = 0; j < ukuran; j++) {
+                bintang += '*';
+            }
+            bintang += '\n';
+        }
+        console.log(bintang);
+    }
+    else if (jenis == 2) {
+        for (var i = 1; i < ukuran; i++) { //untuk normal
+
+            for (var j = 0; j < i + 0; j++) {
+                bintang += '* ';
+            }
+
+            bintang += '\n';
+        }
+        console.log(bintang);
+    }
+    else if (jenis == 3){
+        for (let i = 0; i < ukuran; i++) {
+
+            for (let j = i; j < ukuran; j++) {
+                bintang += ' ';
+            }
+            for (let k = 1; k <= i; k++) {
+                bintang += '*';
+            }
+            bintang += '\n';
+        }
+        console.log(bintang);   
+    }
+    else{
+        console.log('Perintah tidak ditemukan');
+        
+    }
+
+}

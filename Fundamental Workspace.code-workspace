@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "Tugas"
+		},
+		{
+			"path": "Catatan"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Catatan"
+	}
+}

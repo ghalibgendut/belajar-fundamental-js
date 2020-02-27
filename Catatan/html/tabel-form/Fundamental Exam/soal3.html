@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market HTML</title>
+    <style>
+        table,
+        td,
+        th {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+    </style>
+    <script defer src="./soal3.js"></script>
+</head>
+
+<body>
+    <h1 style="text-align: center;">MARKET</h1>
+
+    <form>
+        <!-- Filter -->
+        <fieldset>
+            <legend>Filter</legend>
+            <p>Nama : <input type="text" id="nama" oninput="cariNama()"></p>
+            <p>Harga : <input placeholder="Harga Terendah" type="number" id="harga1" oninput="cariHarga()" > - <input placeholder="Harga Tertingi" type="number" id="harga2" oninput="cariHarga()"></p>
+            <p>Category :
+                <select id="catFilter" oninput="cari()">
+                   
+                </select>
+            </p>
+        </fieldset>
+
+        <!-- Tambah -->
+        <fieldset>
+            <legend>Tambah Data</legend>
+            <table>
+                <tr>
+                    <td><input type="text" placeholder="Nama Barang" id="name"></td>
+                    <td><input type="number" placeholder="Harga" id="price"></td>
+                    <td>
+                        <select id="catTambah">
+                            
+                        </select>
+                    </td>
+                    <td><input type="text" placeholder="Stock" id="stock"></td>
+                </tr>
+            </table>
+            <p><input type="button" value="Tambah" onclick="funInputData()"></p>
+        </fieldset>
+
+        <!-- Tabel -->
+        <fieldset>
+            <legend>Tabel</legend>
+            <table>
+                <thead>
+                    <th>ID</th>
+                    <th>Category</th>
+                    <th>Nama</th>
+                    <th>Harga</th>
+                    <th>Stock</th>
+                    <th>Beli</th>
+                    <th colspan="2" >Action</th>
+                </thead>
+                <tbody id="render">
+        
+                </tbody>
+            </table>
+        </fieldset>
+
+        <!-- CART -->
+        <fieldset>
+            <legend>Cart</legend>
+            <table>
+                <thead>
+                    <th>ID</th>
+                    <th>Category</th>
+                    <th>Nama</th>
+                    <th>Harga</th>
+                    <th>Quantity</th>
+                    <th>Action</th>
+                </thead>
+                <tbody id="cart">
+
+                </tbody>
+            </table>
+            <p><input type="button" value="Bayar" onclick="detailTransaksi()"></p>
+        </fieldset>
+
+        <!-- TRANSACTION DETAIL -->
+        <fieldset>
+            <legend>Pembayaran</legend>
+            <h2>Detail Transaksi</h2>
+            <div id="payment">
+
+            </div>
+        </fieldset>
+
+
+    </form>
+
+
+</body>
+
+</html>
