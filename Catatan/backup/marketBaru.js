@@ -38,7 +38,7 @@ var renderList = (data, dataId) => {
                     <input onclick = "funEdit(${obj.id})" type="button" value = "Edit" disabled>
                 </td>
             </tr>`;
-            
+
         }
         // pengecekan ketika mengedit barang tombol beli di disabled
         else if (obj.id == dataId) {
@@ -110,16 +110,19 @@ var funInputData = () => {
 
     // console.log(name, price, stock, category);
 
+    if (_name == '' || isNaN(_price) || isNaN(_stock)) {
+        alert('Barang yang anda masukan tidak boleh kosong')
 
-    // Push ke Object
-    arrProduct.push({
-        id: _id.getTime(),
-        name: _name,
-        price: _price,
-        stock: _stock,
-        category: _category,
-    });
-
+    } else {
+        // Push ke Object
+        arrProduct.push({
+            id: _id.getTime(),
+            name: _name,
+            price: _price,
+            stock: _stock,
+            category: _category,
+        });
+    }
     // Render Product
     renderList(arrProduct);
 }
@@ -271,16 +274,16 @@ var cariHarga = () => {
 
 // Nama A -> Z
 let sortAtoZ = () => {
-    var bandingkanNama = (a,b) => {
+    var bandingkanNama = (a, b) => {
         var nameA = a.name.toUpperCase();
         var nameB = b.name.toUpperCase();
         var status = '';
-        
+
         var comp = 0;
-        if (nameA > nameB){
+        if (nameA > nameB) {
             comp = 1;
         }
-        else if(nameA < nameB){
+        else if (nameA < nameB) {
             comp = -1;
         }
         return comp;
@@ -293,7 +296,7 @@ let sortAtoZ = () => {
 
 // Nama Z -> A
 let sortZtoA = () => {
-    var bandingkanNama = (a,b) => {
+    var bandingkanNama = (a, b) => {
         var namaA = a.name.toUpperCase();
         var namaB = b.name.toUpperCase();
 
@@ -301,7 +304,7 @@ let sortZtoA = () => {
         if (namaA < namaB) {
             comp = 1;
         }
-        else if (namaA > namaB){
+        else if (namaA > namaB) {
             comp = -1;
         }
         return comp;
@@ -312,7 +315,7 @@ let sortZtoA = () => {
 
 // Price 1 -> 9
 let sortPrice = () => {
-    var bandingkanHarga = (a,b) => {
+    var bandingkanHarga = (a, b) => {
         var hargaA = a.price;
         var hargaB = b.price;
 
@@ -331,7 +334,7 @@ let sortPrice = () => {
 
 // price 9 -> 1
 let sortHarga = () => {
-    var bandingkanHarga = (a,b) => {
+    var bandingkanHarga = (a, b) => {
         var hargaA = a.price;
         var hargaB = b.price;
 
